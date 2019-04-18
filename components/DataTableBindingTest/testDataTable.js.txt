@@ -1,0 +1,46 @@
+import React from "react"
+
+function TestDataTable (props) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>
+            ID
+          </th>
+          <th>
+            Name
+          </th> 
+          <th>
+            Data Type
+          </th> 
+          <th>
+            Length
+          </th>     
+        </tr>
+      </thead>
+      <tbody>
+        {          
+          props.data.map(row => (
+            <tr>
+              <td>
+                {row.id}
+              </td>
+              <td>
+                {row.attribName}
+              </td>
+              <td>
+                {row.dataType}
+              </td>
+              <td>
+                {row.length}
+              </td>                                          
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  )
+}
+
+export default TestDataTable
